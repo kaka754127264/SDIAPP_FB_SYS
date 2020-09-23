@@ -50,28 +50,28 @@ object SDIAppForm: TSDIAppForm
     Caption = #23457#26680#26085#26399
   end
   object lbl7: TLabel
-    Left = 636
+    Left = 588
     Top = 96
     Width = 48
     Height = 16
     Caption = #24320#21457#32773
   end
   object lbl8: TLabel
-    Left = 636
+    Left = 588
     Top = 130
     Width = 64
     Height = 16
     Caption = #27979#35797#20154#21592
   end
   object lbl9: TLabel
-    Left = 636
+    Left = 588
     Top = 160
     Width = 96
     Height = 16
     Caption = #20135#21697#27979#35797#26085#26399
   end
   object lbl10: TLabel
-    Left = 636
+    Left = 588
     Top = 64
     Width = 32
     Height = 16
@@ -151,6 +151,7 @@ object SDIAppForm: TSDIAppForm
     Top = 240
     Width = 980
     Height = 420
+    DataSource = ds1
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -173,6 +174,7 @@ object SDIAppForm: TSDIAppForm
     Height = 25
     Caption = #25628#32034'Search For'
     TabOrder = 4
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 312
@@ -199,7 +201,7 @@ object SDIAppForm: TSDIAppForm
     TabOrder = 7
   end
   object btn6: TButton
-    Left = 636
+    Left = 620
     Top = 200
     Width = 217
     Height = 25
@@ -207,9 +209,9 @@ object SDIAppForm: TSDIAppForm
     TabOrder = 8
   end
   object btn7: TButton
-    Left = 877
+    Left = 864
     Top = 200
-    Width = 119
+    Width = 132
     Height = 25
     Caption = #19978#20256#22270#29255'UpLoad'
     TabOrder = 9
@@ -880,6 +882,7 @@ object SDIAppForm: TSDIAppForm
     Top = 672
   end
   object con1: TADOConnection
+    Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
       'fo=False;Initial Catalog=FBDB;Data Source=DESKTOP-LA297T7'
@@ -888,11 +891,19 @@ object SDIAppForm: TSDIAppForm
     Top = 672
   end
   object qry1: TADOQuery
+    Active = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
+      'fo=False;Initial Catalog=FBDB;Data Source=DESKTOP-LA297T7'
+    CursorType = ctStatic
     Parameters = <>
+    SQL.Strings = (
+      'select * from FB_SYS')
     Left = 256
     Top = 672
   end
   object ds1: TDataSource
+    DataSet = qry1
     Left = 288
     Top = 672
   end

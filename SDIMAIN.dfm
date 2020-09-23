@@ -89,8 +89,6 @@ object SDIAppForm: TSDIAppForm
     AutoHint = True
     Panels = <>
     SimplePanel = True
-    ExplicitTop = 178
-    ExplicitWidth = 352
   end
   object ToolBar1: TToolBar
     Left = 0
@@ -106,7 +104,6 @@ object SDIAppForm: TSDIAppForm
     ShowHint = True
     TabOrder = 1
     Wrapable = False
-    ExplicitWidth = 352
     object ToolButton9: TToolButton
       Left = 5
       Top = 0
@@ -898,7 +895,10 @@ object SDIAppForm: TSDIAppForm
     CursorType = ctStatic
     Parameters = <>
     SQL.Strings = (
-      'select * from FB_SYS')
+      
+        'select proNumber '#20135#21697#24207#21015#21495',proDescription '#38382#39064#25551#36848',imageDescription '#22270#29255#25551#36848 +
+        ',applicant '#30003#35831#20154',auditor '#23457#26680#21592',reviewDate '#23457#26680#26085#26399',developer '#24320#21457#32773',tester ' +
+        #27979#35797#20154#21592',proTestDate '#20135#21697#27979#35797#26085#26399',upLoadTime '#19978#20256#26102#38388' from FB_SYS')
     Left = 256
     Top = 672
   end
